@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Moniiiiii ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="hearts-container"></div>
+
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div id="slides">
+
+    <!-- Step 1 — Welcome -->
+    <section class="section hero active" data-mood="1">
+        <div class="hero-orbit">
+            <div class="orbit-ring"><i>❤</i><i>❤</i><i>❤</i></div>
+            <div class="envelope">
+                <span class="env-flap"></span>
+                <span class="env-seal">❤</span>
+            </div>
+        </div>
+
+        <h3>For Someone Who Means The World To Me ❤️</h3>
+        <p class="whisper">Press play on us… this one's all for you.</p>
+        <button id="startBtn" class="next-btn">Begin our little story…</button>
+    </section>
+
+    <!-- Step 2 — Birthday -->
+    <section class="section" data-mood="2" id="birthdaySlide">
+        <div class="bunting">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="balloons">
+            <span class="balloon b1"></span>
+            <span class="balloon b2"></span>
+            <span class="balloon b3"></span>
+            <span class="balloon b4"></span>
+        </div>
+
+        <div class="sparkles">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <div class="bday-content">
+            <h1 class="split-letters">Happy Birthday</h1>
+            <h2>My Moniiiiii ❤️</h2>
+            <p class="whisper">Today, I celebrate the most beautiful part of my life — you.</p>
+
+            <div class="date-badge"><span class="mini-flame"></span> June 27th</div>
+
+            <p>The day my favorite person was born.</p>
+            <button class="next-btn">Why you? Let me tell you…</button>
+        </div>
+    </section>
+
+    <!-- Step 3 — Reasons -->
+    <section class="section" data-mood="3">
+        <h2>Reasons I Choose You Every Day ❤️</h2>
+        <p class="whisper" id="reasonNote">Each one is sealed with love… tap a note to open it ❤️</p>
+
+        <div class="cards">
+            <div class="card"><div class="card-inner">
+                <div class="card-face card-front"><span class="card-no">01</span><span class="card-seal">❤</span><span class="card-tap">tap to open</span></div>
+                <div class="card-face card-back"><p>Your smile</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-face card-front"><span class="card-no">02</span><span class="card-seal">❤</span><span class="card-tap">tap to open</span></div>
+                <div class="card-face card-back"><p>The way you always make me laugh</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-face card-front"><span class="card-no">03</span><span class="card-seal">❤</span><span class="card-tap">tap to open</span></div>
+                <div class="card-face card-back"><p>The way we never give up on each other</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-face card-front"><span class="card-no">04</span><span class="card-seal">❤</span><span class="card-tap">tap to open</span></div>
+                <div class="card-face card-back"><p>The countless memories we've created together</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-face card-front"><span class="card-no">05</span><span class="card-seal">❤</span><span class="card-tap">tap to open</span></div>
+                <div class="card-face card-back"><p>Because after all this time, I still choose you every day</p></div>
+            </div></div>
+            <div class="card"><div class="card-inner">
+                <div class="card-face card-front"><span class="card-no">06</span><span class="card-seal">❤</span><span class="card-tap">tap to open</span></div>
+                <div class="card-face card-back"><p>Simply because you're my Moniiiiii</p></div>
+            </div></div>
+        </div>
+
+        <button class="next-btn hidden-btn">Now… make a wish ✨</button>
+    </section>
+
+    <!-- Step 4 — Make a wish -->
+    <section class="section" data-mood="4" id="wishSlide">
+        <h2>Make A Wish, Babu ❤️</h2>
+        <p class="whisper">Close your eyes, think of something beautiful… then tap the flame.</p>
+
+        <div id="cake" title="Tap the flame to blow it out">
+            <div class="flame"></div>
+            <div class="candle"></div>
+            <div class="cake-top"></div>
+            <div class="cake-body"></div>
+        </div>
+
+        <p id="wishMessage" class="hidden">Your wish is already on its way to coming true. ✨</p>
+
+        <button class="next-btn hidden-btn">I wrote you something…</button>
+    </section>
+
+    <!-- Step 5 — Letter -->
+    <section class="section" data-mood="5" id="letterSlide">
+        <h2>To My Love ❤️</h2>
+
+        <div class="letter">
+            <p id="typewriter"></p>
+        </div>
+
+        <button class="next-btn">Come closer…</button>
+    </section>
+
+    <!-- Step 6 — Hold this close -->
+    <section class="section" data-mood="6" id="heartSlide">
+        <h2>Hold This Close ❤️</h2>
+        <p class="whisper">Place your hand on my heart… and tap it, slowly.</p>
+
+        <div id="heartStage">
+            <div id="bigHeart" title="Tap my heart"></div>
+        </div>
+
+        <div id="heartLines"></div>
+
+        <button class="next-btn hidden-btn">I'm not done yet…</button>
+    </section>
+
+    <!-- Step 7 — Final -->
+    <section class="section final" data-mood="7" id="finalSlide">
+        <div class="bloom"></div>
+
+        <h2>Forever grateful for the day you were born ❤️</h2>
+
+        <p class="love-text">I Love You, Moniiiiii ❤️</p>
+
+        <p class="whisper" id="finalNote">One last secret is hiding in here… press the heart to set it free.</p>
+
+        <button id="loveBtn" class="heart-btn">
+            <span class="hb-heart">❤</span>
+            <span class="hb-label">Open My Heart</span>
+        </button>
+
+        <div id="finalReveal" class="hidden">
+            <div class="love-card">
+                <div class="emoji-row"><span>🌹</span><span>💌</span><span>🌹</span></div>
+                <div class="divider"><span></span>❤<span></span></div>
+                <p class="final-big">In every life, in every world, I'd still find you — and choose you all over again.</p>
+                <p id="signature">— Forever yours, your favorite chatterbox ❤️</p>
+                <div class="emoji-row"><span>💞</span><span>💝</span><span>💞</span></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Step indicator -->
+<div id="dots"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
